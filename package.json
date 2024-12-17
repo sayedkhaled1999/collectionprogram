@@ -1,26 +1,15 @@
 {
   "name": "collectionprogram",
   "version": "1.0.0",
+  "description": "مرحبًا بكم في **برنامج التحصيل**!",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "build": "your-build-command",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.0",
-    "multer": "^1.4.5-lts.1",
-    "socket.io": "^4.8.0",
-    "xlsx": "^0.18.5"
-  },
-  "devDependencies": {
-    "electron": "^32.1.2",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "electron": "^33.2.1"
   }
 }
