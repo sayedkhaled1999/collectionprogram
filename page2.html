@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
     <title>المطلوب لتحقيق التارجت</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
-</head>
-<style>
+  </head>
+    <style>
 h1 {
     font-size: 36px;
     margin: 0;
@@ -418,23 +414,16 @@ function handleInput() {
     }
 }
 if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/collectionprogram/sw.js').then((registration) => {
-            registration.onupdatefound = () => {
-                const installingWorker = registration.installing;
-                installingWorker.onstatechange = () => {
-                    if (installingWorker.state === 'installed') {
-                        if (navigator.serviceWorker.controller) {
-                            // تم التحديث
-                            console.log('New content is available, please refresh.');
-                            if (confirm("يوجد تحديث جديد للتطبيق. هل ترغب في التحديث؟")) {
-                                window.location.reload();
-                            }
-                        }
-                    }
-                };
-            };
-        });
-    }
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/collectionprogram/service-worker.js') // تأكد من المسار الصحيح
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+            });
+    });
+}
 
     </script>
 </body>

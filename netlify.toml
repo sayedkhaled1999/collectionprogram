@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build" # أمر بناء المشروع (إذا كان لديك)
+  publish = "dist" # مجلد النشر (تأكد من تعديل هذا حسب مسار النشر الخاص بك)
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
